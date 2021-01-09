@@ -12,7 +12,7 @@ export default function App() {
           .join(" ")}
       ></div>
       <h1>
-        On 11.1 we all will release up a ballow in memory of Ranni and raising
+        On 11.1 we all will release up a ballon in memory of Ranni and raising
         awareness to genetic and metabolic diseases.
       </h1>
       <h2>Take a part and:</h2>
