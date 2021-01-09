@@ -1,0 +1,132 @@
+.container {
+  width: 70%;
+  text-align: center;
+  padding: 1em 2em;
+  font-size: 0.5em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    font-size: 1em;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.App {
+  text-align: center;
+font-family: 'Lobster';
+letter-spacing: 0.1em;
+
+  .balloon {
+    display:inline-block;
+     width:120px;
+    height:145px;
+    background:hsl(215,50%,65%);
+    border-radius:80%;
+    position:relative;
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+    margin:20px 30px;
+    transition:transform 0.5s ease;
+    z-index:10;
+    animation:balloons 4s ease-in-out infinite;
+    transform-origin:bottom center;
+  }
+  
+  @keyframes balloons {
+    0%,100%{ transform:translateY(0) rotate(-4deg); }
+    50%{ transform:translateY(-25px) rotate(4deg); }
+  }
+
+
+.balloon:before {
+  content:"▲";
+  font-size:20px;
+  color:hsl(215,30%,50%);
+  display:block;
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:-12px;
+  z-index:-100;
+}
+
+.balloon:after {
+ display:inline-block; top:153px;
+  position:absolute;
+  height:250px;
+  width:1px;
+  margin:0 auto;
+  content:"";
+  background:rgba(0,0,0,0.2); 
+  }
+
+  .balloon:nth-child(1){ background: #CD5C5C; animation-duration:5s; }
+.balloon:nth-child(1):before { color:#E9967A;  }
+
+.fly {
+  animation:fadeOutUp 4s ease-in-out 1;
+  
+}
+
+@keyframes fadeOutUp {
+  0% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+  100% {
+     opacity: 0;
+     transform: translateY(-100px);
+  }
+} 
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+  .animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+  border: none;
+	position: relative;
+	padding: 5px 20px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 0.2rem;
+  color: #FFF;
+	background-color: #CD5C5C;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
+  text-decoration: none;	
+  &:hover {
+opacity: 0.8;
+transition: 0.5s ease-in-out;
+  }
+  }
+}
